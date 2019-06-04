@@ -43,16 +43,15 @@ def coeficienteRegressao(X,Y,i):
         return B0(X,Y) + (B1(X,Y) * X[i])
 
 def regmultipla(y,X):
-        print('teste')
+        return numpy.matmul(X, B(X,y))
         
 def B(X,y):
-        B = 0
         matrizT = numpy.transpose(X)
         matrizInversa = numpy.linalg.inv(numpy.matmul(X, matrizT))
 
-        matrizMultiplicada = numpy.matmul(matrizT,y)
+        matrizTY = numpy.matmul(matrizT,y)
 
-        return numpy.matmul(matrizInversa, matrizMultiplicada)
+        return numpy.matmul(matrizInversa, matrizTY)
 
                 
 x1 = [10,8,13,9,11,14,6,4,12,7,5]
