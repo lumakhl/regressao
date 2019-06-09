@@ -47,11 +47,11 @@ def regmultipla(y,X):
         
 def B(X,y):
         matrizT = numpy.transpose(X)
-        matrizInversa = numpy.linalg.inv(numpy.matmul(X, matrizT))
+        matrizInversa = numpy.linalg.inv(numpy.matmul(matrizT, X))
 
         matrizTY = numpy.matmul(matrizT,y)
-
-        return numpy.matmul(matrizInversa, matrizTY)
+        return numpy.matmul(matrizInversa,matrizTY)
+       
 
                 
 x1 = [10,8,13,9,11,14,6,4,12,7,5]
